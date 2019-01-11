@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { LoginPage } from '../login/login';
+import { CadastroPage } from '../cadastro/cadastro';
 
-/**
- * Generated class for the IntroPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-intro',
@@ -14,11 +10,29 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class IntroPage {
 
+  imgUrl = 'link'
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad IntroPage');
+    
   }
+
+  /**
+   * Vai para pagina de login
+   */
+  goLogin(){
+    this.navCtrl.push(LoginPage)
+  }
+
+  /**
+   * Vai para pagina de cadastro
+   */
+  goSignUp(){
+    this.navCtrl.push(CadastroPage)
+  }
+
+
 
 }

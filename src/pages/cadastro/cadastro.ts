@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 
 /**
  * Generated class for the CadastroPage page.
@@ -18,7 +19,12 @@ export class CadastroPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CadastroPage');
+   
+  }
+
+  goLogin(){
+
+    this.navCtrl.push(LoginPage)
   }
 
 }

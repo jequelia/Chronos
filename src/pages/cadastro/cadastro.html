@@ -1,33 +1,57 @@
-<ion-list>
+<ion-header>
+    <ion-navbar>
+        <ion-title>CADASTRO</ion-title>
 
-    <ion-item>
-      <ion-label>Nome Completo</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+    </ion-navbar>
+</ion-header>
+
+<div class="list-group">
+  <ion-list>
+      <ion-list>
+          <ion-item>
+            <ion-label>Instrumentos</ion-label>
+            <ion-select [(ngModel)]="toppings" multiple="true" cancelText="Cancelar" okText="Pronto">
+              <ion-option value="Violão" selected="true">Violão</ion-option>
+              <ion-option value="Guitarra">Guitarra</ion-option>
+              <ion-option value="Violoncelo" selected="true">Violoncelo</ion-option>
+              <ion-option value="Saxofone">Saxofone</ion-option>
+              <ion-option value="Canto">Canto</ion-option>
+              <ion-option value="Teclado">Teclado</ion-option>
+              <ion-option value="Baixo">Baixo Eletrico</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      
+        <ion-item>
+          <ion-label>Nome Completo</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>CPF</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+
+        <ion-item>
+            <ion-label>Endereço</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+            
+        <ion-item>
+            <ion-label>E-mail</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        <ion-item>
+            <ion-label>Senha</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+          
+      </ion-list>
+
+      <div padding>
+        <button (click)="goLogin()" ion-button color="light" full>CADASTRAR</button>
+      </div>
+    </div>
   
-    <ion-item>
-      <ion-label>CPF</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-
-    <ion-item>
-        <ion-label>Data de NAscimento</ion-label>
-        <ion-input type="text"></ion-input>
-      </ion-item>
-
-    <ion-item>
-        <ion-label>RG</ion-label>
-        <ion-input type="text"></ion-input>
-      </ion-item>
-        
-    <ion-item>
-        <ion-label>Senha</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
-    <ion-item>
-        <ion-label>Digite a senha novamente</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
-
-  
-  </ion-list>
+    
+   
